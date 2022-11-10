@@ -1,0 +1,37 @@
+{
+  "name": "breath-first-search",
+  "version": "1.0.0",
+  "description": "## Background Interested in guided meditation and mental health, I found the guided meditation frustrating since my breathing always fell out of sync with the narrator. Breath First Search goal is to make guided meditation more approachable by leading users into catching their first mindful breath.",
+  "main": "index.js",
+  "browserslist": [
+    "defaults"
+  ],
+  "scripts": {
+    "watch": "webpack --watch --mode=development",
+    "build": "webpack --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimmyvo39/Breath-First-Search.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jimmyvo39/Breath-First-Search/issues"
+  },
+  "homepage": "https://github.com/jimmyvo39/Breath-First-Search#readme",
+  "dependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.0",
+    "core-js": "^3.26.0",
+    "css-loader": "^6.7.1",
+    "mini-css-extract-plugin": "^2.6.1",
+    "regenerator-runtime": "^0.13.10",
+    "sass": "^1.56.1",
+    "sass-loader": "^13.2.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
