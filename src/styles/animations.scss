@@ -1,12 +1,22 @@
 #animations {
-    border: solid black 2px;
-    display: flexbox;
+    display: flex;
+    justify-content: space-between;
+    
+    // border: solid black 5px;
+    height: 600px;
+    width: 950px;
+    margin: 20px auto;
 
     #stage {
+        
+        width: 600px;
+        height: 600px;
         border: solid red 2px;
     }
-
+    
     #picker {
+        width: 300px;
+        height: 600px;
         border: solid blue 2px;
     }
 }
