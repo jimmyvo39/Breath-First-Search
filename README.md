@@ -35,6 +35,7 @@ This project will be implemented with the following technologies:
 - Canvas to render animations. 
 - Webpack and Babel to bundle and transpile the source JavaScript code
 - npm to manage project dependencies
+- iFrame to embed spotify player
 
 
 
