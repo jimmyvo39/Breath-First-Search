@@ -32,7 +32,7 @@ In addition, this project will include the following:
 
 ## Technologies, Libraries, APIs
 This project will be implemented with the following technologies:
-- @[anime.js](https://animejs.com/documentation/) to render animations
+- Canvas to render animations. 
 - Webpack and Babel to bundle and transpile the source JavaScript code
 - npm to manage project dependencies
 
