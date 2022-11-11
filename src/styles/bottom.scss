@@ -1,0 +1,19 @@
+#bottom {
+    display: flexbox;
+    border: black solid 2 px;
+
+
+    #controls_and_nav{
+        display: flexbox;
+        flex-direction: column;
+        border: red solid 2 px;
+
+        #controls {
+            border: purple solid 2 px;
+        }
+
+        #nav {
+            border:cyan solid 2 px
+        }
+    }
+}

@@ -63,3 +63,34 @@ table {
 header {
   border: solid black 2px;
 }
+
+#instructions {
+  border: solid black 2px;
+}
+
+#animations {
+  border: solid black 2px;
+  display: flexbox;
+}
+#animations #stage {
+  border: solid red 2px;
+}
+#animations #picker {
+  border: solid blue 2px;
+}
+
+#bottom {
+  display: flexbox;
+  border: black solid 2 px;
+}
+#bottom #controls_and_nav {
+  display: flexbox;
+  flex-direction: column;
+  border: red solid 2 px;
+}
+#bottom #controls_and_nav #controls {
+  border: purple solid 2 px;
+}
+#bottom #controls_and_nav #nav {
+  border: cyan solid 2 px;
+}
