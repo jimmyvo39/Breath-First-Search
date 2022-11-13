@@ -7,11 +7,11 @@
     width: 950px;
     margin: 20px auto;
 
-    #stage {
-        
-        width: 600px;
-        height: 600px;
-        border: solid red 2px;
+    #canvas {
+        background-color: lightblue;
+        // width: 600px;
+        // height: 600px;
+        border: solid grey 2px;
     }
     
     #picker {

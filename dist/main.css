@@ -77,10 +77,9 @@ header {
   width: 950px;
   margin: 20px auto;
 }
-#animations #stage {
-  width: 600px;
-  height: 600px;
-  border: solid red 2px;
+#animations #canvas {
+  background-color: lightblue;
+  border: solid grey 2px;
 }
 #animations #picker {
   width: 300px;
