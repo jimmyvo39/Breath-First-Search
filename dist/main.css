@@ -77,9 +77,14 @@ header {
   width: 950px;
   margin: 20px auto;
 }
-#animations #canvas {
-  background-color: lightyellow;
+#animations #stage {
+  background-color: lightcoral;
+  width: 600px;
+  height: 600px;
   border: solid grey 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #animations #picker {
   width: 300px;

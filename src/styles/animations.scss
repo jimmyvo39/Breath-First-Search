@@ -7,11 +7,23 @@
     width: 950px;
     margin: 20px auto;
 
-    #canvas {
-        background-color: lightyellow;
-        // width: 600px;
-        // height: 600px;
+    // #canvas {
+    //     background-color: lightyellow;
+    //     // width: 600px;
+    //     // height: 600px;
+    //     border: solid grey 2px;
+    // }
+
+    #stage {
+        background-color: lightcoral;
+        width: 600px;
+        height: 600px;
         border: solid grey 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        
     }
     
     #picker {
