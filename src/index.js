@@ -1,15 +1,13 @@
-import Canvas from "./scripts/canvas";
-
-
-
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
+
+
 
 const circle = {
     x: 300,
     y: 300,
-    radius: 20,
-    dr: 5 
+    radius: 80,
+    dr: 1
     // change in radius
 }
     
@@ -20,28 +18,78 @@ function drawCircle(){
 }
 
 
-function update() {
+function inhale() {
 
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-console.log(circle.radius)
-  drawCircle();
-  
+    function draw(){
 
-  // change size
-  circle.radius += circle.dr
- 
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  
-  if (circle.radius >= 280) {
-    circle.dr *= -1;
-  }
+        drawCircle();
 
-  if (circle.radius <= 20) {
-    circle.dr *= -1;
-   
-  }
+        ctx.font = '20px serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('INHALE', 300, 300);
 
+        // change size
+        circle.radius += circle.dr
+
+        if (circle.radius >= 280) {
+        circle.radius = 80;
+        }
+    }
+    
+    setInterval(draw,40)
 }
-setInterval(update,100);
 
-// update();
+// inhale()
+
+
+
+
+function hold(){
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    circle.radius = 280
+    drawCircle();
+    
+    ctx.font = '20px serif';
+    ctx.textAlign = 'center'
+    ctx.fillText('HOLD', 300, 300);
+    
+}
+
+// setTimeout(hold,4000)
+
+
+function exhale(){
+    function draw(){
+    
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        drawCircle();
+
+        ctx.font = '20px serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('EXHALE', 300, 300);
+
+        // change size
+        circle.radius = circle.radius - circle.dr
+
+        if (circle.radius <= 80) {
+            circle.radius = 280;
+        }
+    }
+    setInterval(draw,40)
+}
+
+exhale()
+
+
+
+
+
+
+
+
+
+
+

@@ -7,10 +7,6 @@ class Timing {
         // this.inhale.addEventListener("keydown", this.setInhale(this))
     }
 
-    // setInhale(){
-    //     this.inhale = 
-    // }
-
-    // figure out how to get the duration of holddown
+   //need 2 even listener key down to get start time. key up to get end time
 
 }

@@ -7,26 +7,15 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (function() { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function() {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scripts_canvas__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scripts/canvas */ \"./src/scripts/canvas.js\");\n\nconst canvas = document.getElementById(\"canvas\");\nconst ctx = canvas.getContext(\"2d\");\nconst circle = {\n  x: 300,\n  y: 300,\n  radius: 20,\n  dr: 5\n  // change in radius\n};\n\nfunction drawCircle() {\n  ctx.beginPath();\n  ctx.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 2);\n  ctx.stroke();\n}\nfunction update() {\n  ctx.clearRect(0, 0, canvas.width, canvas.height);\n  console.log(circle.radius);\n  drawCircle();\n\n  // change size\n  circle.radius += circle.dr;\n  if (circle.radius >= 280) {\n    circle.dr *= -1;\n  }\n  if (circle.radius <= 20) {\n    circle.dr *= -1;\n  }\n}\nsetInterval(update, 100);\n\n// update();//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXguanMuanMiLCJtYXBwaW5ncyI6Ijs7QUFBc0M7QUFJdEMsTUFBTUMsTUFBTSxHQUFHQyxRQUFRLENBQUNDLGNBQWMsQ0FBQyxRQUFRLENBQUM7QUFDaEQsTUFBTUMsR0FBRyxHQUFHSCxNQUFNLENBQUNJLFVBQVUsQ0FBQyxJQUFJLENBQUM7QUFFbkMsTUFBTUMsTUFBTSxHQUFHO0VBQ1hDLENBQUMsRUFBRSxHQUFHO0VBQ05DLENBQUMsRUFBRSxHQUFHO0VBQ05DLE1BQU0sRUFBRSxFQUFFO0VBQ1ZDLEVBQUUsRUFBRTtFQUNKO0FBQ0osQ0FBQzs7QUFFRCxTQUFTQyxVQUFVLEdBQUU7RUFDakJQLEdBQUcsQ0FBQ1EsU0FBUyxFQUFFO0VBQ2ZSLEdBQUcsQ0FBQ1MsR0FBRyxDQUFDUCxNQUFNLENBQUNDLENBQUMsRUFBQ0QsTUFBTSxDQUFDRSxDQUFDLEVBQUNGLE1BQU0sQ0FBQ0csTUFBTSxFQUFDLENBQUMsRUFBQ0ssSUFBSSxDQUFDQyxFQUFFLEdBQUMsQ0FBQyxDQUFDO0VBQ3BEWCxHQUFHLENBQUNZLE1BQU0sRUFBRTtBQUNoQjtBQUdBLFNBQVNDLE1BQU0sR0FBRztFQUVoQmIsR0FBRyxDQUFDYyxTQUFTLENBQUMsQ0FBQyxFQUFFLENBQUMsRUFBRWpCLE1BQU0sQ0FBQ2tCLEtBQUssRUFBRWxCLE1BQU0sQ0FBQ21CLE1BQU0sQ0FBQztFQUNsREMsT0FBTyxDQUFDQyxHQUFHLENBQUNoQixNQUFNLENBQUNHLE1BQU0sQ0FBQztFQUN4QkUsVUFBVSxFQUFFOztFQUdaO0VBQ0FMLE1BQU0sQ0FBQ0csTUFBTSxJQUFJSCxNQUFNLENBQUNJLEVBQUU7RUFJMUIsSUFBSUosTUFBTSxDQUFDRyxNQUFNLElBQUksR0FBRyxFQUFFO0lBQ3hCSCxNQUFNLENBQUNJLEVBQUUsSUFBSSxDQUFDLENBQUM7RUFDakI7RUFFQSxJQUFJSixNQUFNLENBQUNHLE1BQU0sSUFBSSxFQUFFLEVBQUU7SUFDdkJILE1BQU0sQ0FBQ0ksRUFBRSxJQUFJLENBQUMsQ0FBQztFQUVqQjtBQUVGO0FBQ0FhLFdBQVcsQ0FBQ04sTUFBTSxFQUFDLEdBQUcsQ0FBQzs7QUFFdkIiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9icmVhdGgtZmlyc3Qtc2VhcmNoLy4vc3JjL2luZGV4LmpzP2I2MzUiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IENhbnZhcyBmcm9tIFwiLi9zY3JpcHRzL2NhbnZhc1wiO1xuXG5cblxuY29uc3QgY2FudmFzID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoXCJjYW52YXNcIik7XG5jb25zdCBjdHggPSBjYW52YXMuZ2V0Q29udGV4dChcIjJkXCIpO1xuXG5jb25zdCBjaXJjbGUgPSB7XG4gICAgeDogMzAwLFxuICAgIHk6IDMwMCxcbiAgICByYWRpdXM6IDIwLFxuICAgIGRyOiA1IFxuICAgIC8vIGNoYW5nZSBpbiByYWRpdXNcbn1cbiAgICBcbmZ1bmN0aW9uIGRyYXdDaXJjbGUoKXtcbiAgICBjdHguYmVnaW5QYXRoKCk7XG4gICAgY3R4LmFyYyhjaXJjbGUueCxjaXJjbGUueSxjaXJjbGUucmFkaXVzLDAsTWF0aC5QSSoyKTtcbiAgICBjdHguc3Ryb2tlKCk7XG59XG5cblxuZnVuY3Rpb24gdXBkYXRlKCkge1xuXG4gIGN0eC5jbGVhclJlY3QoMCwgMCwgY2FudmFzLndpZHRoLCBjYW52YXMuaGVpZ2h0KTtcbmNvbnNvbGUubG9nKGNpcmNsZS5yYWRpdXMpXG4gIGRyYXdDaXJjbGUoKTtcbiAgXG5cbiAgLy8gY2hhbmdlIHNpemVcbiAgY2lyY2xlLnJhZGl1cyArPSBjaXJjbGUuZHJcbiBcblxuICBcbiAgaWYgKGNpcmNsZS5yYWRpdXMgPj0gMjgwKSB7XG4gICAgY2lyY2xlLmRyICo9IC0xO1xuICB9XG5cbiAgaWYgKGNpcmNsZS5yYWRpdXMgPD0gMjApIHtcbiAgICBjaXJjbGUuZHIgKj0gLTE7XG4gICBcbiAgfVxuXG59XG5zZXRJbnRlcnZhbCh1cGRhdGUsMTAwKTtcblxuLy8gdXBkYXRlKCk7XG4iXSwibmFtZXMiOlsiQ2FudmFzIiwiY2FudmFzIiwiZG9jdW1lbnQiLCJnZXRFbGVtZW50QnlJZCIsImN0eCIsImdldENvbnRleHQiLCJjaXJjbGUiLCJ4IiwieSIsInJhZGl1cyIsImRyIiwiZHJhd0NpcmNsZSIsImJlZ2luUGF0aCIsImFyYyIsIk1hdGgiLCJQSSIsInN0cm9rZSIsInVwZGF0ZSIsImNsZWFyUmVjdCIsIndpZHRoIiwiaGVpZ2h0IiwiY29uc29sZSIsImxvZyIsInNldEludGVydmFsIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/index.js\n");
-
-/***/ }),
-
-/***/ "./src/scripts/canvas.js":
-/*!*******************************!*\
-  !*** ./src/scripts/canvas.js ***!
-  \*******************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-eval("__webpack_require__.r(__webpack_exports__);\nclass Canvas {\n  constructor() {}\n}\n/* harmony default export */ __webpack_exports__[\"default\"] = (Canvas);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvc2NyaXB0cy9jYW52YXMuanMuanMiLCJtYXBwaW5ncyI6IjtBQUVBLE1BQU1BLE1BQU0sQ0FBQztFQUNYQyxXQUFXLEdBQUcsQ0FFZDtBQUlGO0FBRUEsK0RBQWVELE1BQU0iLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9icmVhdGgtZmlyc3Qtc2VhcmNoLy4vc3JjL3NjcmlwdHMvY2FudmFzLmpzPzdiZGUiXSwic291cmNlc0NvbnRlbnQiOlsiXG5cbmNsYXNzIENhbnZhcyB7XG4gIGNvbnN0cnVjdG9yKCkge1xuXG4gIH1cblxuICBcblxufVxuXG5leHBvcnQgZGVmYXVsdCBDYW52YXM7XG5cblxuXG4gICJdLCJuYW1lcyI6WyJDYW52YXMiLCJjb25zdHJ1Y3RvciJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/scripts/canvas.js\n");
+eval("const canvas = document.getElementById(\"canvas\");\nconst ctx = canvas.getContext(\"2d\");\nconst circle = {\n  x: 300,\n  y: 300,\n  radius: 80,\n  dr: 1\n  // change in radius\n};\n\nfunction drawCircle() {\n  ctx.beginPath();\n  ctx.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 2);\n  ctx.stroke();\n}\nfunction inhale() {\n  function draw() {\n    ctx.clearRect(0, 0, canvas.width, canvas.height);\n    drawCircle();\n    ctx.font = '20px serif';\n    ctx.textAlign = 'center';\n    ctx.fillText('INHALE', 300, 300);\n\n    // change size\n    circle.radius += circle.dr;\n    if (circle.radius >= 280) {\n      circle.radius = 80;\n    }\n  }\n  setInterval(draw, 40);\n}\n\n// inhale()\n\nfunction hold() {\n  ctx.clearRect(0, 0, canvas.width, canvas.height);\n  circle.radius = 280;\n  drawCircle();\n  ctx.font = '20px serif';\n  ctx.textAlign = 'center';\n  ctx.fillText('HOLD', 300, 300);\n}\n\n// setTimeout(hold,4000)\n\nfunction exhale() {\n  function draw() {\n    ctx.clearRect(0, 0, canvas.width, canvas.height);\n    drawCircle();\n    ctx.font = '20px serif';\n    ctx.textAlign = 'center';\n    ctx.fillText('EXHALE', 300, 300);\n\n    // change size\n    circle.radius = circle.radius - circle.dr;\n    if (circle.radius <= 80) {\n      circle.radius = 280;\n    }\n  }\n  setInterval(draw, 40);\n}\nexhale();//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXguanMuanMiLCJuYW1lcyI6WyJjYW52YXMiLCJkb2N1bWVudCIsImdldEVsZW1lbnRCeUlkIiwiY3R4IiwiZ2V0Q29udGV4dCIsImNpcmNsZSIsIngiLCJ5IiwicmFkaXVzIiwiZHIiLCJkcmF3Q2lyY2xlIiwiYmVnaW5QYXRoIiwiYXJjIiwiTWF0aCIsIlBJIiwic3Ryb2tlIiwiaW5oYWxlIiwiZHJhdyIsImNsZWFyUmVjdCIsIndpZHRoIiwiaGVpZ2h0IiwiZm9udCIsInRleHRBbGlnbiIsImZpbGxUZXh0Iiwic2V0SW50ZXJ2YWwiLCJob2xkIiwiZXhoYWxlIl0sInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9icmVhdGgtZmlyc3Qtc2VhcmNoLy4vc3JjL2luZGV4LmpzP2I2MzUiXSwic291cmNlc0NvbnRlbnQiOlsiY29uc3QgY2FudmFzID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoXCJjYW52YXNcIik7XG5jb25zdCBjdHggPSBjYW52YXMuZ2V0Q29udGV4dChcIjJkXCIpO1xuXG5cblxuY29uc3QgY2lyY2xlID0ge1xuICAgIHg6IDMwMCxcbiAgICB5OiAzMDAsXG4gICAgcmFkaXVzOiA4MCxcbiAgICBkcjogMVxuICAgIC8vIGNoYW5nZSBpbiByYWRpdXNcbn1cbiAgICBcbmZ1bmN0aW9uIGRyYXdDaXJjbGUoKXtcbiAgICBjdHguYmVnaW5QYXRoKCk7XG4gICAgY3R4LmFyYyhjaXJjbGUueCxjaXJjbGUueSxjaXJjbGUucmFkaXVzLDAsTWF0aC5QSSoyKTtcbiAgICBjdHguc3Ryb2tlKCk7XG59XG5cblxuZnVuY3Rpb24gaW5oYWxlKCkge1xuXG4gICAgZnVuY3Rpb24gZHJhdygpe1xuXG4gICAgICAgIGN0eC5jbGVhclJlY3QoMCwgMCwgY2FudmFzLndpZHRoLCBjYW52YXMuaGVpZ2h0KTtcblxuICAgICAgICBkcmF3Q2lyY2xlKCk7XG5cbiAgICAgICAgY3R4LmZvbnQgPSAnMjBweCBzZXJpZic7XG4gICAgICAgIGN0eC50ZXh0QWxpZ24gPSAnY2VudGVyJztcbiAgICAgICAgY3R4LmZpbGxUZXh0KCdJTkhBTEUnLCAzMDAsIDMwMCk7XG5cbiAgICAgICAgLy8gY2hhbmdlIHNpemVcbiAgICAgICAgY2lyY2xlLnJhZGl1cyArPSBjaXJjbGUuZHJcblxuICAgICAgICBpZiAoY2lyY2xlLnJhZGl1cyA+PSAyODApIHtcbiAgICAgICAgY2lyY2xlLnJhZGl1cyA9IDgwO1xuICAgICAgICB9XG4gICAgfVxuICAgIFxuICAgIHNldEludGVydmFsKGRyYXcsNDApXG59XG5cbi8vIGluaGFsZSgpXG5cblxuXG5cbmZ1bmN0aW9uIGhvbGQoKXtcbiAgICBjdHguY2xlYXJSZWN0KDAsIDAsIGNhbnZhcy53aWR0aCwgY2FudmFzLmhlaWdodCk7XG4gICAgY2lyY2xlLnJhZGl1cyA9IDI4MFxuICAgIGRyYXdDaXJjbGUoKTtcbiAgICBcbiAgICBjdHguZm9udCA9ICcyMHB4IHNlcmlmJztcbiAgICBjdHgudGV4dEFsaWduID0gJ2NlbnRlcidcbiAgICBjdHguZmlsbFRleHQoJ0hPTEQnLCAzMDAsIDMwMCk7XG4gICAgXG59XG5cbi8vIHNldFRpbWVvdXQoaG9sZCw0MDAwKVxuXG5cbmZ1bmN0aW9uIGV4aGFsZSgpe1xuICAgIGZ1bmN0aW9uIGRyYXcoKXtcbiAgICBcbiAgICAgICAgY3R4LmNsZWFyUmVjdCgwLCAwLCBjYW52YXMud2lkdGgsIGNhbnZhcy5oZWlnaHQpO1xuXG4gICAgICAgIGRyYXdDaXJjbGUoKTtcblxuICAgICAgICBjdHguZm9udCA9ICcyMHB4IHNlcmlmJztcbiAgICAgICAgY3R4LnRleHRBbGlnbiA9ICdjZW50ZXInO1xuICAgICAgICBjdHguZmlsbFRleHQoJ0VYSEFMRScsIDMwMCwgMzAwKTtcblxuICAgICAgICAvLyBjaGFuZ2Ugc2l6ZVxuICAgICAgICBjaXJjbGUucmFkaXVzID0gY2lyY2xlLnJhZGl1cyAtIGNpcmNsZS5kclxuXG4gICAgICAgIGlmIChjaXJjbGUucmFkaXVzIDw9IDgwKSB7XG4gICAgICAgICAgICBjaXJjbGUucmFkaXVzID0gMjgwO1xuICAgICAgICB9XG4gICAgfVxuICAgIHNldEludGVydmFsKGRyYXcsNDApXG59XG5cbmV4aGFsZSgpXG5cblxuXG5cblxuXG5cblxuXG5cblxuIl0sIm1hcHBpbmdzIjoiQUFBQSxNQUFNQSxNQUFNLEdBQUdDLFFBQVEsQ0FBQ0MsY0FBYyxDQUFDLFFBQVEsQ0FBQztBQUNoRCxNQUFNQyxHQUFHLEdBQUdILE1BQU0sQ0FBQ0ksVUFBVSxDQUFDLElBQUksQ0FBQztBQUluQyxNQUFNQyxNQUFNLEdBQUc7RUFDWEMsQ0FBQyxFQUFFLEdBQUc7RUFDTkMsQ0FBQyxFQUFFLEdBQUc7RUFDTkMsTUFBTSxFQUFFLEVBQUU7RUFDVkMsRUFBRSxFQUFFO0VBQ0o7QUFDSixDQUFDOztBQUVELFNBQVNDLFVBQVUsR0FBRTtFQUNqQlAsR0FBRyxDQUFDUSxTQUFTLEVBQUU7RUFDZlIsR0FBRyxDQUFDUyxHQUFHLENBQUNQLE1BQU0sQ0FBQ0MsQ0FBQyxFQUFDRCxNQUFNLENBQUNFLENBQUMsRUFBQ0YsTUFBTSxDQUFDRyxNQUFNLEVBQUMsQ0FBQyxFQUFDSyxJQUFJLENBQUNDLEVBQUUsR0FBQyxDQUFDLENBQUM7RUFDcERYLEdBQUcsQ0FBQ1ksTUFBTSxFQUFFO0FBQ2hCO0FBR0EsU0FBU0MsTUFBTSxHQUFHO0VBRWQsU0FBU0MsSUFBSSxHQUFFO0lBRVhkLEdBQUcsQ0FBQ2UsU0FBUyxDQUFDLENBQUMsRUFBRSxDQUFDLEVBQUVsQixNQUFNLENBQUNtQixLQUFLLEVBQUVuQixNQUFNLENBQUNvQixNQUFNLENBQUM7SUFFaERWLFVBQVUsRUFBRTtJQUVaUCxHQUFHLENBQUNrQixJQUFJLEdBQUcsWUFBWTtJQUN2QmxCLEdBQUcsQ0FBQ21CLFNBQVMsR0FBRyxRQUFRO0lBQ3hCbkIsR0FBRyxDQUFDb0IsUUFBUSxDQUFDLFFBQVEsRUFBRSxHQUFHLEVBQUUsR0FBRyxDQUFDOztJQUVoQztJQUNBbEIsTUFBTSxDQUFDRyxNQUFNLElBQUlILE1BQU0sQ0FBQ0ksRUFBRTtJQUUxQixJQUFJSixNQUFNLENBQUNHLE1BQU0sSUFBSSxHQUFHLEVBQUU7TUFDMUJILE1BQU0sQ0FBQ0csTUFBTSxHQUFHLEVBQUU7SUFDbEI7RUFDSjtFQUVBZ0IsV0FBVyxDQUFDUCxJQUFJLEVBQUMsRUFBRSxDQUFDO0FBQ3hCOztBQUVBOztBQUtBLFNBQVNRLElBQUksR0FBRTtFQUNYdEIsR0FBRyxDQUFDZSxTQUFTLENBQUMsQ0FBQyxFQUFFLENBQUMsRUFBRWxCLE1BQU0sQ0FBQ21CLEtBQUssRUFBRW5CLE1BQU0sQ0FBQ29CLE1BQU0sQ0FBQztFQUNoRGYsTUFBTSxDQUFDRyxNQUFNLEdBQUcsR0FBRztFQUNuQkUsVUFBVSxFQUFFO0VBRVpQLEdBQUcsQ0FBQ2tCLElBQUksR0FBRyxZQUFZO0VBQ3ZCbEIsR0FBRyxDQUFDbUIsU0FBUyxHQUFHLFFBQVE7RUFDeEJuQixHQUFHLENBQUNvQixRQUFRLENBQUMsTUFBTSxFQUFFLEdBQUcsRUFBRSxHQUFHLENBQUM7QUFFbEM7O0FBRUE7O0FBR0EsU0FBU0csTUFBTSxHQUFFO0VBQ2IsU0FBU1QsSUFBSSxHQUFFO0lBRVhkLEdBQUcsQ0FBQ2UsU0FBUyxDQUFDLENBQUMsRUFBRSxDQUFDLEVBQUVsQixNQUFNLENBQUNtQixLQUFLLEVBQUVuQixNQUFNLENBQUNvQixNQUFNLENBQUM7SUFFaERWLFVBQVUsRUFBRTtJQUVaUCxHQUFHLENBQUNrQixJQUFJLEdBQUcsWUFBWTtJQUN2QmxCLEdBQUcsQ0FBQ21CLFNBQVMsR0FBRyxRQUFRO0lBQ3hCbkIsR0FBRyxDQUFDb0IsUUFBUSxDQUFDLFFBQVEsRUFBRSxHQUFHLEVBQUUsR0FBRyxDQUFDOztJQUVoQztJQUNBbEIsTUFBTSxDQUFDRyxNQUFNLEdBQUdILE1BQU0sQ0FBQ0csTUFBTSxHQUFHSCxNQUFNLENBQUNJLEVBQUU7SUFFekMsSUFBSUosTUFBTSxDQUFDRyxNQUFNLElBQUksRUFBRSxFQUFFO01BQ3JCSCxNQUFNLENBQUNHLE1BQU0sR0FBRyxHQUFHO0lBQ3ZCO0VBQ0o7RUFDQWdCLFdBQVcsQ0FBQ1AsSUFBSSxFQUFDLEVBQUUsQ0FBQztBQUN4QjtBQUVBUyxNQUFNLEVBQUUifQ==\n//# sourceURL=webpack-internal:///./src/index.js\n");
 
 /***/ }),
 
@@ -36,35 +25,15 @@ eval("__webpack_require__.r(__webpack_exports__);\nclass Canvas {\n  constructor
   \************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXguc2Nzcy5qcyIsIm1hcHBpbmdzIjoiO0FBQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9icmVhdGgtZmlyc3Qtc2VhcmNoLy4vc3JjL2luZGV4LnNjc3M/OTc0NSJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBleHRyYWN0ZWQgYnkgbWluaS1jc3MtZXh0cmFjdC1wbHVnaW5cbmV4cG9ydCB7fTsiXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/index.scss\n");
 
 /***/ })
 
 /******/ 	});
 /************************************************************************/
-/******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
-/******/ 	
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
-/******/ 		if (cachedModule !== undefined) {
-/******/ 			return cachedModule.exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
-/******/ 			exports: {}
-/******/ 		};
-/******/ 	
-/******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
+/******/ 	// The require scope
+/******/ 	var __webpack_require__ = {};
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/make namespace object */
@@ -83,8 +52,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval-source-map devtool is used.
-/******/ 	__webpack_require__("./src/index.js");
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.scss");
+/******/ 	__webpack_modules__["./src/index.js"](0, {}, __webpack_require__);
+/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__["./src/index.scss"](0, __webpack_exports__, __webpack_require__);
 /******/ 	
 /******/ })()
 ;
