@@ -9,8 +9,14 @@ const circle = {
     // change in radius
     text: "INHALE"
 }
+
     
 function drawCircle(){
+    ctx.globalAlpha = 0.9
+    ctx.font = '20px serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(circle.text, 300, 590);
+
     const gradient = ctx.createRadialGradient(circle.x,circle.y,20,circle.x,circle.y, 250)
     gradient.addColorStop(0, "black");
     gradient.addColorStop(0.25, "aqua");
@@ -24,9 +30,6 @@ function drawCircle(){
     ctx.fillStyle = gradient;
     ctx.fill()
 
-    ctx.font = '20px serif';
-    ctx.textAlign = 'center';
-    ctx.fillText(circle.text, 300, 300);
 }
 
 
