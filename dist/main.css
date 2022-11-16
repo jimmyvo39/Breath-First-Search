@@ -56,7 +56,9 @@ table {
 }
 
 header {
-  align-self: center;
+  width: 1000px;
+  padding: 30px;
+  font-family: fantasy;
   font-size: 50px;
 }
 
@@ -82,7 +84,6 @@ header {
 #bottom #controls_and_nav {
   height: 200px;
   width: 200;
-  border: solid red 2px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -106,4 +107,8 @@ header {
 
 #nav {
   border: solid cyan solid 2px;
+}
+
+body {
+  background-color: aqua;
 }
