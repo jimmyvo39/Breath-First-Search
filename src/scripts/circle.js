@@ -1,12 +1,13 @@
 import {clearCanvas, ctx} from "./canvas.js";
-
+import { Timing } from "./timing.js";
 
 const circle = {
     x: 300,
     y: 300,
     radius: 80,
-    dr: 1
+    dr: 1,
     // change in radius
+    text: "INHALE"
 }
     
 function drawCircle(){
@@ -15,57 +16,40 @@ function drawCircle(){
     ctx.stroke();
 }
 
-export function inhale() {
+
+export function breathing(time) {
 
     function draw(){
 
-        // ctx.clearRect(0, 0, canvas.width, canvas.height);
+
         clearCanvas();
         drawCircle();
 
         ctx.font = '20px serif';
         ctx.textAlign = 'center';
-        ctx.fillText('INHALE', 300, 300);
+        ctx.fillText(circle.text, 300, 300);
 
         // change size
         circle.radius += circle.dr
 
         if (circle.radius >= 280) {
-        circle.radius = 80;
+        circle.dr *= -1;
+        circle.text = "EXHALE"
+        
         }
-    }
-    
-    setInterval(draw,40)
-}
-
-export function hold(){
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    circle.radius = 280
-    drawCircle();
-    
-    ctx.font = '20px serif';
-    ctx.textAlign = 'center'
-    ctx.fillText('HOLD', 300, 300);
-    
-}
-
-export function exhale(){
-    function draw(){
-    
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        drawCircle();
-
-        ctx.font = '20px serif';
-        ctx.textAlign = 'center';
-        ctx.fillText('EXHALE', 300, 300);
-
-        // change size
-        circle.radius = circle.radius - circle.dr
 
         if (circle.radius <= 80) {
-            circle.radius = 280;
+            circle.dr *= -1;
+            circle.text = "INHALE"
         }
+
+
     }
-    setInterval(draw,40)
+    
+    setInterval(draw,time/200)
+    // divide time by # of frames in a full cycle
 }
+
+breathing(5000);
+
+

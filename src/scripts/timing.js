@@ -1,9 +1,7 @@
-class Timing {
-    constructor(inhale = 4000,hold = 2000,exhale = 3000){
+export class Timing {
+    constructor(inhale = 4000){
         this.inhale = inhale;
-        this.hold = hold;
-        this.exhale = exhale
-
+   
         // this.inhale.addEventListener("keydown", this.setInhale(this))
     }
 
