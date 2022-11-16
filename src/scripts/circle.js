@@ -18,10 +18,7 @@ function drawCircle(){
 
 
 export function breathing(time) {
-
     function draw(){
-
-
         clearCanvas();
         drawCircle();
 
@@ -29,27 +26,26 @@ export function breathing(time) {
         ctx.textAlign = 'center';
         ctx.fillText(circle.text, 300, 300);
 
+        circle.radius += circle.dr;
         // change size
-        circle.radius += circle.dr
 
         if (circle.radius >= 280) {
-        circle.dr *= -1;
-        circle.text = "EXHALE"
-        
+            //change radius direction and text
+            circle.dr *= -1;
+            circle.text = "EXHALE"
         }
 
         if (circle.radius <= 80) {
+            //change radius direction and text
             circle.dr *= -1;
             circle.text = "INHALE"
         }
-
-
     }
     
     setInterval(draw,time/200)
     // divide time by # of frames in a full cycle
 }
 
-breathing(5000);
+// breathing(4000);
 
 
