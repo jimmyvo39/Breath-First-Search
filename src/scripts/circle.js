@@ -12,24 +12,24 @@ const circle = {
 
     
 function drawCircle(){
-    ctx.globalAlpha = 0.9
-    ctx.font = '20px serif';
-    ctx.textAlign = 'center';
-    ctx.fillText(circle.text, 300, 595);
-
+    // ctx.globalAlpha = 0.9
+    
     const gradient = ctx.createRadialGradient(circle.x,circle.y,20,circle.x,circle.y, 250)
     gradient.addColorStop(0, "black");
     gradient.addColorStop(0.25, "aqua");
     gradient.addColorStop(0.5, "white");
     gradient.addColorStop(1, "navy");
-
+    
     ctx.beginPath();
     ctx.arc(circle.x,circle.y,circle.radius,0,Math.PI*2);
     // ctx.stroke();
-
+    
     ctx.fillStyle = gradient;
     ctx.fill()
-
+    
+    ctx.font = '20px serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(circle.text, 300, 600);
 }
 
 
