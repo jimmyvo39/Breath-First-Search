@@ -56,37 +56,22 @@ table {
 }
 
 header {
-  border: solid black 2px;
-  width: 1000px;
-  margin: 10px auto;
-  padding: 30px;
-  font-family: fantasy;
-  font-size: 20px;
+  align-self: center;
+  font-size: 50px;
 }
 
 #instructions {
-  border: solid black 2px;
   width: 800px;
   margin: 20px auto;
 }
 
 #animations {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   height: 600px;
   width: 950px;
   margin: 20px auto;
 }
-#animations #canvas {
-  background-color: lightyellow;
-  border: solid grey 2px;
-}
-#animations #picker {
-  width: 300px;
-  height: 600px;
-  border: solid blue 2px;
-}
-
 #bottom {
   display: flex;
   justify-content: space-between;
@@ -113,7 +98,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: solid blue 2px;
 }
 
 #controls {

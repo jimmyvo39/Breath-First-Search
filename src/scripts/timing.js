@@ -1,5 +1,5 @@
 export class Timing {
-    constructor(inhale = 4000){
+    constructor(inhale = 3000){
         this.inhale = inhale;
    
         // this.inhale.addEventListener("keyup", this.setInhale(this))
@@ -18,16 +18,19 @@ let duration = 0;
 
 window.onkeydown = function(e) {
     if (e.key === " " ) {
-        start = e.timeStamp;
+        start = Date.now();
     }
 };
 
 window.onkeyup = function(e) {
     if ( e.key === " " ) {
-        end = e.timeStamp
+        end = Date.now();
         duration = end - start;
 
-        console.log(duration)
+        
+        console.log("start: ",start)
+        console.log("end: ",end)
+        console.log("duration: ",(duration))
     }
     
     // this.inhale = duration

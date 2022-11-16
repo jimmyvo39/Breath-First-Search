@@ -1,6 +1,6 @@
 #animations {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     
     // border: solid black 5px;
     height: 600px;
@@ -8,15 +8,16 @@
     margin: 20px auto;
 
     #canvas {
-        background-color: lightyellow;
+        // background-color: aqua;
         // width: 600px;
         // height: 600px;
-        border: solid grey 2px;
+        // border: solid grey 2px;
+        // border-radius: 10px;
     }
     
-    #picker {
-        width: 300px;
-        height: 600px;
-        border: solid blue 2px;
-    }
+    // #picker {
+    //     width: 300px;
+    //     height: 600px;
+    //     border: solid blue 2px;
+    // }
 }
