@@ -15,7 +15,7 @@ function drawCircle(){
     ctx.globalAlpha = 0.9
     ctx.font = '20px serif';
     ctx.textAlign = 'center';
-    ctx.fillText(circle.text, 300, 590);
+    ctx.fillText(circle.text, 300, 595);
 
     const gradient = ctx.createRadialGradient(circle.x,circle.y,20,circle.x,circle.y, 250)
     gradient.addColorStop(0, "black");

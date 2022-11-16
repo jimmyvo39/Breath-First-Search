@@ -1,5 +1,5 @@
 export class Timing {
-    constructor(inhale = 3000){
+    constructor(inhale = 2800){
         this.inhale = inhale;
    
         // this.inhale.addEventListener("keyup", this.setInhale(this))
