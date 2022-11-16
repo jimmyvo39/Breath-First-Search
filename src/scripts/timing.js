@@ -17,13 +17,13 @@ let end = 0;
 let duration = 0;
 
 window.onkeydown = function(e) {
-    if (e.key === " " ) {
+    if (e.key === ' ') {
         start = Date.now();
     }
 };
 
 window.onkeyup = function(e) {
-    if ( e.key === " " ) {
+    if (e.key === ' ') {
         end = Date.now();
         duration = end - start;
 
@@ -33,6 +33,6 @@ window.onkeyup = function(e) {
         console.log("duration: ",(duration))
     }
     
-    // this.inhale = duration
 };
 
+  

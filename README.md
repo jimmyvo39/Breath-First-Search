@@ -22,7 +22,7 @@ In addition, this project will include the following:
 - README
 
 ## Wireframes
-![This is an image](wireFrame.png)
+![This is an image](./asset/wireFrame.png)
 - instructions include an explanation of how users can change the animation timing
 - Nav links include links to this project's GitHub repo and my LinkedIn and the About modal
 - Controls allow the user to reset to default timer
