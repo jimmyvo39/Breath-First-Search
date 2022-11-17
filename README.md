@@ -108,7 +108,7 @@ export class Timing {
 - additional controls for fine-tuning  breath holding and exhaling timing
 
 
-### Ackknowledgement
+### Acknowledgement
 [Meyer Web](https://meyerweb.com/eric/tools/css/reset/) - providing CSS Reset
 
 [Spotify](https://developer.spotify.com/documentation/embeds/guides/using-the-iframe-api/) - ability to embed audio tracks
