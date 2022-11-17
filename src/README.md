@@ -3,7 +3,7 @@
 ## Background
 Interested in guided meditations and mental health, I found some guided meditation frustrating, since my breathing always fell out of sync with the narrator. Breath First Search's goal is to make guided meditation more approachable by leading users into catching their first mindful breath.
 
-Breath First Search is guided breathing through visual animation. The Animation loops default sequence is 2.8 seconds of inhaling followed by 2.8 seconds of exhaling
+[Breath First Search](https://jimmyvo39.github.io/Breath-First-Search/) is guided breathing through visual animation. The Animation loops default sequence is 2.8 seconds of inhaling followed by 2.8 seconds of exhaling
 
 ## Functionality & MVPs
 
@@ -44,7 +44,59 @@ I broke the animations into parts and was able to change the FPS by calling for 
 
  - **Tuesday:** With my animations in parts i struggled to render them in a sequence. At the end of the day i ultimately refactored my animation to be a single loop where the inhale and exhale time are identical. 
 
-- **Wednesday:** Spent the morning trying to set up an event listener that recorded the duration the space bar was held down to give users the ability to adjust the animation timing. Set that feature aside and worked on styling my page and animation. I embedded a spotify track, and added links to my Github and LinkedIn.
+ ```javascript
+export function breathing(time) {
+    function draw(){
+        clearCanvas();
+        drawCircle();
+
+        circle.radius += circle.dr;
+        // change size
+
+        if (circle.radius >= 280) {
+            //change radius direction and text
+            circle.dr *= -1;
+            circle.text = "EXHALE"
+        }
+
+        if (circle.radius <= 80) {
+            //change radius direction and text
+            circle.dr *= -1;
+            circle.text = "INHALE"
+        }
+    }
+    
+    setInterval(draw,time/200)
+    // divide time by # of frames in a full cycle
+}
+```
+
+- **Wednesday:** Spent the morning trying to set up an event listener that recorded the duration the space bar was held down to give users the ability to adjust the animation timing. Set that feature aside and worked on styling my page and animation. I embedded a spotify track, and added links to my Github and LinkedIn. After some sleep i took another try at my event listen but instead used an html button rather than the keyboard.
+
+```javascript
+export class Timing {
+    constructor(button){
+        this.button = button;
+        this.inhale = 2800;
+        this.start = 0;
+        this.end = 0;
+        this.duration = 0;
+   
+        this.button.addEventListener("mousedown", this.onmousedown.bind(this));
+        this.button.addEventListener("mouseup", this.onmouseup.bind(this))
+    }
+
+    onmousedown() {
+    this.start = Date.now();
+    };
+
+    onmouseup() {
+        this.end = Date.now();
+        this.duration = this.end - this.start;        
+        this.inhale = this.duration
+    };
+}
+```
 
 - **Thursday Morning:** Deploy to GitHub pages. rewrite proposal as a production README.
 

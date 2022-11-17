@@ -25,7 +25,6 @@ export class Timing {
         this.inhale = this.duration
         
     };
-
 }
 
 
