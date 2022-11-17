@@ -5,31 +5,15 @@
     padding-top: 20px;
     width: 950px;
     margin: 0 auto;
-    // margin-top: 40px;
-
-    #controls_and_nav {
-        height: 200px;
-        width: 200;
-        // border: solid red 2px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-    }
     
-    #controls {
-        border: solid  purple solid 2px;
-    }
     
-    #nav {
-        border: solid cyan solid 2px;
-    }
 
-    #spotify {
-        width: 800px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        // border: solid blue 2px;
-    }
+
+    // #spotify {
+    //     width: 800px;
+    //     display: flex;
+    //     justify-content: space-between;
+    //     align-items: center;
+    //     // border: solid blue 2px;
+    // }
 }

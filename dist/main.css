@@ -56,12 +56,17 @@ table {
 }
 
 header {
-  padding-top: 40px;
+  display: flex;
+  padding-top: 20px;
+  justify-content: space-around;
+}
+header h1 {
   font-family: Brush Script MT, Brush Script Std, cursive;
-  font-size: 50px;
+  font-size: 60px;
   color: white;
   text-shadow: 2px 3px 10px navy;
   text-align: center;
+  align-self: center;
 }
 
 #instructions {
@@ -77,34 +82,27 @@ header {
   margin: 20px auto;
 }
 #animations #instructions {
+  padding: 20px;
+  background-color: aquamarine;
+  font-size: large;
   width: 300px;
-  height: 600px;
-  border: solid blue 2px;
+  height: 300px;
+  border-radius: 5px;
+  border: 3px solid navy;
+  inline-size: 280px;
+  line-height: 1.2;
+  overflow-wrap: break-word;
+  hyphens: manual;
+}
+
+.myDIV:hover + .hide {
+  display: block;
 }
 
 #bottom {
   padding-top: 20px;
   width: 950px;
   margin: 0 auto;
-}
-#bottom #controls_and_nav {
-  height: 200px;
-  width: 200;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-#bottom #controls {
-  border: solid purple solid 2px;
-}
-#bottom #nav {
-  border: solid cyan solid 2px;
-}
-#bottom #spotify {
-  width: 800px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 #controls {

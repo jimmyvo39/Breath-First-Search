@@ -16,8 +16,27 @@
     // }
     
     #instructions {
+        padding: 20px;
+        background-color: aquamarine;
+        font-size: large;
         width: 300px;
-        height: 600px;
-        border: solid blue 2px;
+        height: 300px;
+        border-radius: 5px;
+        border: 3px solid navy;
+        inline-size: 280px;
+        line-height: 1.2;
+        overflow-wrap: break-word;
+        hyphens: manual;
+
+        // border: solid blue 2px;
     }
+}
+
+// .hide {
+//     display: none;
+// }
+  
+.myDIV:hover + .hide {
+    display: block;
+
 }
