@@ -58,6 +58,6 @@ export function breathing(time) {
     // divide time by # of frames in a full cycle
 }
 
-// breathing(4000);
+
 
 

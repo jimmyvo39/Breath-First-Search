@@ -56,11 +56,12 @@ table {
 }
 
 header {
-  width: 1000px;
-  padding: 60px;
-  font-family: fantasy;
+  padding-top: 40px;
+  font-family: Brush Script MT, Brush Script Std, cursive;
   font-size: 50px;
   color: white;
+  text-shadow: 2px 3px 10px navy;
+  text-align: center;
 }
 
 #instructions {
@@ -75,12 +76,16 @@ header {
   width: 950px;
   margin: 20px auto;
 }
+#animations #instructions {
+  width: 300px;
+  height: 600px;
+  border: solid blue 2px;
+}
+
 #bottom {
-  display: flex;
-  justify-content: space-between;
+  padding-top: 20px;
   width: 950px;
   margin: 0 auto;
-  margin-top: 40px;
 }
 #bottom #controls_and_nav {
   height: 200px;

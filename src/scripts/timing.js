@@ -1,38 +1,32 @@
 export class Timing {
-    constructor(inhale = 2800){
-        this.inhale = inhale;
+    constructor(button){
+        this.button = button;
+        this.inhale = 2800;
+        this.start = 0;
+        this.end = 0;
+        this.duration = 0;
    
-        // this.inhale.addEventListener("keyup", this.setInhale(this))
+        this.button.addEventListener("mousedown", this.onmousedown.bind(this));
+        this.button.addEventListener("mouseup", this.onmouseup.bind(this))
     }
 
+   onmousedown() {
+    this.start = Date.now();
+    };
 
-    
-   //need 2 even listener key down to get start time. key up to get end time
+    onmouseup() {
+        this.end = Date.now();
+        this.duration = this.end - this.start;
 
-   
+        console.log("start: ",this.start)
+        console.log("end: ",this.end)
+        console.log("duration: ",(this.duration))
+        
+        this.inhale = this.duration
+        
+    };
+
 }
 
-let start = 0;
-let end = 0;
-let duration = 0;
-
-window.onkeydown = function(e) {
-    if (e.key === ' ') {
-        start = Date.now();
-    }
-};
-
-window.onkeyup = function(e) {
-    if (e.key === ' ') {
-        end = Date.now();
-        duration = end - start;
-
-        
-        console.log("start: ",start)
-        console.log("end: ",end)
-        console.log("duration: ",(duration))
-    }
-    
-};
 
   
