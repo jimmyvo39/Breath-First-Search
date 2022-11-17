@@ -64,7 +64,7 @@ header h1 {
   font-family: Brush Script MT, Brush Script Std, cursive;
   font-size: 60px;
   color: white;
-  text-shadow: 2px 3px 10px navy;
+  text-shadow: 2px 3px 10px navy, 2px 3px 40px grey;
   text-align: center;
   align-self: center;
 }
@@ -87,12 +87,13 @@ header h1 {
   font-size: large;
   width: 300px;
   height: 300px;
-  border-radius: 5px;
-  border: 3px solid navy;
+  border-radius: 10px;
+  border: 2px solid navy;
   inline-size: 280px;
   line-height: 1.2;
   overflow-wrap: break-word;
   hyphens: manual;
+  box-shadow: 5px 5px 20px grey;
 }
 
 .myDIV:hover + .hide {
