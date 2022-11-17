@@ -106,7 +106,7 @@ export class Timing {
 - choose from a list of animations
 - additional controls for color schemes
 - additional controls for fine-tuning  breath holding and exhaling timing
-
+- change spotify track for spotify playlist
 
 ### Acknowledgement
 [Meyer Web](https://meyerweb.com/eric/tools/css/reset/) - providing CSS Reset
