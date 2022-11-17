@@ -71,7 +71,7 @@ export function breathing(time) {
 }
 ```
 
-- **Wednesday:** Spent the morning trying to set up an event listener that recorded the duration the space bar was held down to give users the ability to adjust the animation timing. Set that feature aside and worked on styling my page and animation. I embedded a spotify track, and added links to my Github and LinkedIn. After some sleep i took another try at my event listen but instead used an html button rather than the keyboard.
+- **Wednesday:** Spent the morning trying to set up an event listener that recorded the duration the space bar was held down to give users the ability to adjust the animation timing. Set that feature aside and worked on styling my page and animation. I embedded a spotify track, and added links to my Github and LinkedIn. After some sleep i took another try at my event listener but instead used an html button rather than the keyboard.
 
 ```javascript
 export class Timing {
@@ -100,8 +100,7 @@ export class Timing {
 
 - **Thursday Morning:** Deploy to GitHub pages. rewrite proposal as a production README.
 
-## Bonus feature
-Anticipated updates include:
+## Anticipated updates include:
 - Calibrate the animating timing to their lung capacity by holding down a button
 - fine-tune the timer through controls 
 - choose from a list of animations
