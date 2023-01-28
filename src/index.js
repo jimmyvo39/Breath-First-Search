@@ -1,5 +1,6 @@
 
 import { breathing} from "./scripts/circle.js";
+import {clearCanvas} from "./scripts/canvas.js";
 
 let intervalId;
 let interval = 2800/200;
@@ -13,6 +14,7 @@ intervalId = setInterval(invokeFunction, interval);
 
 document.getElementById("hold").addEventListener("mousedown", function(event) {
   startTime = Date.now();
+  clearCanvas();
   clearInterval(intervalId);
 });
 
