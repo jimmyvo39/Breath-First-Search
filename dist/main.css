@@ -1,3 +1,178 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:"";content:none}table{border-collapse:collapse;border-spacing:0}header{display:flex;padding-top:20px;justify-content:space-around}header h1{font-family:Brush Script MT,Brush Script Std,cursive;font-size:60px;color:#fff;text-shadow:2px 3px 10px navy,2px 3px 40px gray;text-align:center;align-self:center}#instructions{width:800px;margin:20px auto}#animations{display:flex;justify-content:center;height:600px;width:950px;margin:20px auto}#animations #instructions{padding:20px;background-color:#7fffd4;font-size:large;width:300px;height:300px;border-radius:10px;border:2px solid navy;inline-size:280px;line-height:1.2;overflow-wrap:break-word;hyphens:manual;box-shadow:5px 5px 20px gray}.myDIV:hover+.hide{display:block}#bottom{padding-top:20px;width:950px;margin:0 auto}#controls{border:solid purple solid 2px}#nav{border:solid aqua solid 2px}body{background-color:aqua}
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
-/*# sourceMappingURL=main.css.map*/
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  display: flex;
+  padding-top: 20px;
+  justify-content: space-around;
+}
+header h1 {
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  font-size: 60px;
+  color: white;
+  text-shadow: 2px 3px 10px navy, 2px 3px 40px grey;
+  text-align: center;
+  align-self: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container a {
+  padding: 20px;
+  background: teal;
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.container a:hover {
+  background-color: #fff;
+  color: teal;
+  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02), 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028), 12.5px 12.5px 10px rgba(0, 0, 0, 0.035), 22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042), 41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05), 100px 100px 80px rgba(0, 0, 0, 0.07);
+}
+
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.5;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal.open {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+.modal-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.modal-container {
+  border-radius: 10px;
+  background: #fff;
+  position: relative;
+  padding: 30px;
+  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02), 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028), 12.5px 12.5px 10px rgba(0, 0, 0, 0.035), 22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042), 41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05), 100px 100px 80px rgba(0, 0, 0, 0.07);
+  width: 50vw;
+}
+.modal-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  outline: none;
+  appearance: none;
+  color: red;
+  background: none;
+  border: 0px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#animations {
+  display: flex;
+  justify-content: center;
+  height: 600px;
+  width: 950px;
+  margin: 20px auto;
+}
+#animations #instructions {
+  padding: 20px;
+  background-color: aquamarine;
+  font-size: large;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  border: 2px solid navy;
+  inline-size: 280px;
+  line-height: 1.2;
+  overflow-wrap: break-word;
+  hyphens: manual;
+  box-shadow: 5px 5px 20px grey;
+}
+
+.myDIV:hover + .hide {
+  display: block;
+}
+
+#bottom {
+  padding-top: 20px;
+  width: 950px;
+  margin: 0 auto;
+}
+
+#controls {
+  border: solid purple solid 2px;
+}
+
+#nav {
+  border: solid cyan solid 2px;
+}
+
+body {
+  background-color: aqua;
+}
