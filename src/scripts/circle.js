@@ -1,5 +1,5 @@
 import {clearCanvas, ctx} from "./canvas.js";
-import { Timing } from "./timing.js";
+// import { Timing } from "./timing.js";
 
 const circle = {
     x: 300,
@@ -34,28 +34,27 @@ function drawCircle(){
 
 
 export function breathing(time) {
-    function draw(){
-        clearCanvas();
-        drawCircle();
 
-        circle.radius += circle.dr;
-        // change size
+    clearCanvas();
+    drawCircle();
 
-        if (circle.radius >= 280) {
-            //change radius direction and text
-            circle.dr *= -1;
-            circle.text = "EXHALE"
-        }
+    if(!time) time = 2800
 
-        if (circle.radius <= 80) {
-            //change radius direction and text
-            circle.dr *= -1;
-            circle.text = "INHALE"
-        }
+    circle.radius += circle.dr;
+    // change size
+
+    if (circle.radius >= 280) {
+        //change radius direction and text
+        circle.dr *= -1;
+        circle.text = "EXHALE FOR " + time/1000 + " SECONDS"
+    }
+
+    if (circle.radius <= 80) {
+        //change radius direction and text
+        circle.dr *= -1;
+        circle.text = "INHALE FOR " + time/1000 + " SECONDS"
     }
     
-    setInterval(draw,time/200)
-    // divide time by # of frames in a full cycle
 }
 
 
