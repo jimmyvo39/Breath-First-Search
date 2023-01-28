@@ -133,6 +133,11 @@ header h1 {
   cursor: pointer;
 }
 
+ol li {
+  list-style: decimal;
+  margin-left: 20px;
+}
+
 #animations {
   display: flex;
   justify-content: center;
