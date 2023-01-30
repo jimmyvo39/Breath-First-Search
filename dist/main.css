@@ -234,14 +234,6 @@ ol li {
   margin: 0 auto;
 }
 
-#controls {
-  border: solid purple solid 2px;
-}
-
-#nav {
-  border: solid cyan solid 2px;
-}
-
 body {
   background-color: aqua;
 }
